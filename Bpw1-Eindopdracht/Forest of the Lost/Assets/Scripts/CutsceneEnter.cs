@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Cutscene : MonoBehaviour
 {
-    public GameObject thePlayer;
-    public GameObject cutsceneCam;
-
-    void OnTriggerEnter(Collider other)
+    //public bool TriggerScene = false;
+    void OnTriggerEnter (Collider other)
     {
-        cutsceneCam.SetActive(true);
-        thePlayer.SetActive(false);
+            Debug.Log("Cutscene is triggered");
     }
 }
