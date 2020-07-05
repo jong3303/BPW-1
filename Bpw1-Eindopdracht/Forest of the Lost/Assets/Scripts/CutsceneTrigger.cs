@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class CutsceneTrigger : MonoBehaviour
 {
@@ -43,5 +44,6 @@ public class CutsceneTrigger : MonoBehaviour
         timeline.stopped -= OnPlayableDirectorStopped;
         thePlayer.SetActive(true);
         fireLight.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
