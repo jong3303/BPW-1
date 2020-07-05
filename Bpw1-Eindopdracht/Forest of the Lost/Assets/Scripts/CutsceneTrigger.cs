@@ -8,6 +8,8 @@ public class CutsceneTrigger : MonoBehaviour
     public bool TriggerScene = false;
     public PlayableDirector timeline;
     public FollowPlayer LanternFollow;
+    public GameObject thePlayer;
+    public GameObject fireLight;
 
     void Start()
     {
@@ -18,8 +20,10 @@ public class CutsceneTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Carryable" && LanternFollow.PickUp == true)
         {
-            Debug.Log("Cutscene is triggered");
+            //Debug.Log("Cutscene is triggered");
             timeline.Play();
+            thePlayer.SetActive(false);
+            //Debug.Log(thePlayer.activeSelf);
         }
     }
     void OnEnable()
@@ -37,5 +41,7 @@ public class CutsceneTrigger : MonoBehaviour
     void OnDisable()
     {
         timeline.stopped -= OnPlayableDirectorStopped;
+        thePlayer.SetActive(true);
+        fireLight.SetActive(true);
     }
 }
