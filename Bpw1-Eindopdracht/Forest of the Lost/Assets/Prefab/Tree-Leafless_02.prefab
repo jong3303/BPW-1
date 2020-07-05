@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8676163243944853061}
   - component: {fileID: 377434027754062963}
   - component: {fileID: 6197062303224363146}
+  - component: {fileID: 634240469653441463}
   m_Layer: 0
   m_Name: Tree-Leafless_02
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &634240469653441463
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5637580224854281302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8312469765112164533, guid: d9133b2bec088434d99c7b32f857e738, type: 3}
